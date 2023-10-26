@@ -13,7 +13,6 @@ let winStates = [
         [2,4,6],
     ]
 
-
 function handleMove(position){
 
     if(gameOver) {
@@ -59,3 +58,14 @@ function isWin(){
 
     return false;
 }
+
+function restart(){
+
+    board = ['', '', '', '', '', '', '', '', ''];
+    playerTime = 0;
+    symbols = ['o', 'x'];
+    gameOver = false;
+    updateSquares(true);
+}
+
+
