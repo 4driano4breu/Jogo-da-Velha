@@ -28,19 +28,19 @@ function updateSquare(position){
     square.innerHTML = `<div class ='${symbol}'></div>`
 }
 
-function updateSquares(){
+function updateSquares(isToClean = false){
 
     let squares = document.querySelectorAll(".square");
-
     squares.forEach((square)=>{
 
     let position = square.id;
     let symbol = board[position];
 
-        if(symbol != ''){
+        if(symbol != '' || isToClean){
             square.innerHTML = `<div class ='${symbol}'></div>`
         }
     })
 }
+
 
 
